@@ -33,7 +33,7 @@ import com.squareup.picasso.Target;
  */
 public class BlurFragment extends Fragment {
 
-    private static final String IMAGE_URL = "http://i1.olxthailand.com/df/0/ui/post/2014/11/03/1/b/b18c868093976dad1c33b117c4c607ef.jpeg";
+    private static final String IMAGE_URL = "http://material-design.storage.googleapis.com/publish/v_1/quantumexternal/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png";
 
     private Bitmap bitmap;
     private ImageView imageView;
@@ -68,9 +68,7 @@ public class BlurFragment extends Fragment {
         @Override
         public void onBitmapFailed(Drawable errorDrawable) {
             Log.d("Picasso", "Loading failed");
-            if(isAdded()) {
-                Toast.makeText(getActivity(), "Loading failed", Toast.LENGTH_SHORT).show();
-            }
+            textView.setText("Loading failed");
         }
 
         @Override
@@ -128,8 +126,9 @@ public class BlurFragment extends Fragment {
 
             }
         });
-
-        Picasso.with(getActivity()).load(IMAGE_URL).into(imageLoadingTarget);
+        Picasso picasso = Picasso.with(getActivity());
+        picasso.setLoggingEnabled(true);
+        picasso.load(IMAGE_URL).into(imageLoadingTarget);
     }
 
     @Override

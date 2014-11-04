@@ -15,7 +15,8 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:scaleType="fitXY"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:background="#c0c0c0"/>
 
     <SeekBar
         android:layout_width="match_parent"
