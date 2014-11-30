@@ -2,7 +2,6 @@ package sample.robgthai.com.renderscripttest;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
@@ -33,7 +31,8 @@ import com.squareup.picasso.Target;
  */
 public class BlurFragment extends Fragment {
 
-    private static final String IMAGE_URL = "http://material-design.storage.googleapis.com/publish/v_1/quantumexternal/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png";
+    private static final String IMAGE_URL = "http://www.hammondscandies.com/img/store/product-large/AllNaturalCherryLollipopLA05934.jpg";
+//    private static final String IMAGE_URL = "http://material-design.storage.googleapis.com/publish/v_1/quantumexternal/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png";
 
     private Bitmap bitmap;
     private ImageView imageView;
